@@ -107,8 +107,8 @@ export default function Sidebar() {
                 <Card
                   className={
                     pathname === "/watchlists"
-                      ? "!text-white !bg-[#f33f40]"
-                      : ""
+                      ? "!text-white !bg-[#f33f40] sm:w-full"
+                      : "sm:w-full"
                   }
                 >
                   <div className="px-3 py-2 flex gap-3 items-center">
