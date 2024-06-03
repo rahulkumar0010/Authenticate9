@@ -12,6 +12,7 @@ export default function Login() {
 
   const handleLogin = () => {
     if (email) {
+      // Generate Id
       let id = Date.now();
       dispatch(loging({ email, id }));
       localStorage.setItem("user", JSON.stringify({ id, email }));
