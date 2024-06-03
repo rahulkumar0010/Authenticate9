@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
 import { loging } from "../features/auth/authSlice";
 import { useAppDispatch } from "../hooks";
 import Button from "../components/Button";
@@ -13,7 +12,7 @@ export default function Login() {
 
   const handleLogin = () => {
     if (email) {
-      let id = uuidv4();
+      let id = Date.now();
       dispatch(loging({ email, id }));
       localStorage.setItem("user", JSON.stringify({ id, email }));
       navigate("/");
